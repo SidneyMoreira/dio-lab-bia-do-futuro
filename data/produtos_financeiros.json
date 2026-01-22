@@ -1,4 +1,12 @@
 [
+    {
+    "nome": "Bitcoin (BTC)",
+    "categoria": "Criptomoeda / Ativo Digital",
+    "risco": "Alto",
+    "rentabilidade": "Alta volatilidade, com potencial de alta no longo prazo e fortes oscilações no curto prazo",
+    "aporte_minimo": 1,
+    "indicado_para": "Investidores com perfil moderado a arrojado, que toleram alta volatilidade, possuem visão de longo prazo e buscam diversificação fora do sistema financeiro tradicional"
+  },
   {
     "nome": "Tesouro Selic",
     "categoria": "renda_fixa",
