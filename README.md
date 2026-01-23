@@ -1,149 +1,253 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🎓 Mahailah - Educadora Financeira Inteligente
 
-## Contexto
+> **Agente de IA para educação financeira personalizada, desenvolvido como parte do desafio DIO + Bradesco**
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+Mahailah é uma educadora financeira virtual que ensina conceitos de finanças pessoais de forma didática e personalizada, utilizando os próprios dados do cliente como exemplos práticos. Diferente de consultores tradicionais, ela **não recomenda investimentos** - apenas educa e esclarece dúvidas.
 
 ---
 
-## O Que Você Deve Entregar
+## 📋 Sobre o Projeto
 
-### 1. Documentação do Agente
+Este projeto foi desenvolvido como resposta ao desafio "Agente Financeiro Inteligente com IA Generativa" da DIO em parceria com o Bradesco. O objetivo era criar um agente que:
 
-Defina **o que** seu agente faz e **como** ele funciona:
-
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+- ✅ **Antecipa necessidades** ao invés de apenas responder perguntas
+- ✅ **Personaliza** explicações com base no contexto de cada cliente
+- ✅ **Educa de forma consultiva** sem fazer recomendações específicas
+- ✅ **Garante segurança** evitando alucinações e informações inventadas
 
 ---
 
-### 2. Base de Conhecimento
+## 🎯 Caso de Uso
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+### O Problema
+62% dos brasileiros não sabem o que é reserva de emergência. Muitas pessoas querem aprender sobre finanças, mas não sabem por onde começar e têm receio de fazer perguntas "básicas".
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+### A Solução
+Mahailah atua como uma professora particular de finanças disponível 24h. Ela:
+- Explica conceitos usando **seus próprios dados** como exemplo
+- Usa linguagem simples e acessível
+- Admite quando não sabe algo
+- Nunca julga os gastos do cliente
+- Mantém um tom amigável e didático
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
-
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+### Público-Alvo
+Pessoas iniciantes em finanças pessoais que desejam aprender a organizar suas finanças de forma prática.
 
 ---
 
-### 4. Aplicação Funcional
+## 🏗️ Arquitetura
 
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
-
-```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+```mermaid
+flowchart TD
+    A[Usuário] -->|Pergunta| B[Interface Streamlit]
+    B --> C[Mahailah - Agente]
+    C --> D[Base de Conhecimento]
+    D -->|Dados do Cliente| C
+    C --> E[LLM - Ollama]
+    E --> F[Validação Anti-Alucinação]
+    F --> G[Resposta Educativa]
+    G --> B
+    B --> A
 ```
 
+**Componentes:**
+- **Interface:** Streamlit (simples e funcional)
+- **LLM:** Ollama com modelo `gpt-oss` (100% local, sem custos)
+- **Base de Conhecimento:** Dados mockados (perfil, transações, produtos)
+- **Validação:** Regras rígidas no prompt para evitar alucinações
+
 ---
 
-## Dicas Finais
+## 📊 Base de Conhecimento
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+A Mahailah utiliza quatro fontes de dados para contextualizar o atendimento:
+
+| Arquivo | Conteúdo | Uso |
+|---------|----------|-----|
+| `perfil_investidor.json` | Nome, idade, perfil, metas financeiras | Personalizar explicações |
+| `transacoes.csv` | Histórico de gastos do cliente | Analisar padrões de forma didática |
+| `produtos_financeiros.json` | Catálogo de produtos (Tesouro, CDB, FII, Bitcoin) | Explicar como cada produto funciona |
+| `historico_atendimento.csv` | Interações anteriores | Dar continuidade ao atendimento |
+
+### Adaptações Realizadas
+- Substituí "Fundo Multimercado" por "Fundo Imobiliário (FII)"
+- Adicionei **Bitcoin (BTC)** como opção de estudo
+- *Motivo:* Usar apenas produtos que conheço bem para validar melhor as respostas
+
+---
+
+## 🤖 Como a Mahailah Funciona
+
+### System Prompt (Resumido)
+```
+Você é a Mahailah, uma Educadora Financeira amigável e didática.
+
+REGRAS:
+1. NUNCA recomende investimentos específicos
+2. Use os dados do cliente para dar exemplos personalizados
+3. Linguagem simples, como se explicasse para um amigo
+4. Se não souber, admita: "Não tenho essa informação, mas posso explicar..."
+5. Sempre pergunte se o cliente entendeu
+6. Respostas sucintas (máximo 3 parágrafos)
+```
+
+### Exemplos de Interação
+
+**Pergunta:** "O que é CDI?"  
+**Mahailah:** "CDI é uma taxa de referência usada pelos bancos. Quando um investimento rende '100% do CDI', significa que ele acompanha essa taxa. Hoje o CDI está próximo da Selic. Quer que eu explique a diferença entre os dois?"
+
+**Pergunta:** "Onde estou gastando mais?"  
+**Mahailah:** "Olhando suas transações de outubro, sua maior despesa é moradia (R$ 1.380), seguida de alimentação (R$ 570). Juntas, representam quase 80% dos seus gastos. Isso é bem comum! Quer que eu explique algumas estratégias de organização?"
+
+**Pergunta:** "Devo investir em ações?"  
+**Mahailah:** "Não posso te dizer se você deve, mas posso explicar como funciona! Ações são pedaços de empresas - você vira sócio. O risco é alto porque o preço varia muito. Seu perfil está como 'moderado', então vale entender bem antes de decidir. Quer saber mais?"
+
+---
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+- Python 3.10+
+- Ollama instalado ([ollama.com](https://ollama.com))
+
+### Instalação
+
+1. **Clone o repositório**
+```bash
+git clone https://github.com/seu-usuario/mahailah-educadora-financeira.git
+cd mahailah-educadora-financeira
+```
+
+2. **Instale as dependências**
+```bash
+pip install -r src/requirements.txt
+```
+
+3. **Configure o Ollama**
+```bash
+# Baixe o modelo
+ollama pull gpt-oss
+
+# Inicie o serviço
+ollama serve
+```
+
+4. **Execute a aplicação**
+```bash
+streamlit run src/app.py
+```
+
+5. **Acesse no navegador:** `http://localhost:8501`
+
+---
+
+## 📈 Avaliação e Métricas
+
+### Métricas Principais
+
+| Métrica | Descrição | Como foi testado |
+|---------|-----------|------------------|
+| **Assertividade** | Respondeu o que foi perguntado? | ✅ Testes com perguntas específicas |
+| **Segurança** | Evitou inventar informações? | ✅ Perguntas fora do contexto |
+| **Coerência** | Resposta adequada ao perfil? | ✅ Validação com perfil do cliente |
+
+### Cenários de Teste
+
+1. ✅ **Consulta de gastos:** "Quanto gastei com alimentação?" → Retornou valor correto
+2. ✅ **Pergunta educativa:** "O que é Tesouro Selic?" → Explicou sem recomendar
+3. ✅ **Fora do escopo:** "Qual a previsão do tempo?" → Redirecionou para finanças
+4. ✅ **Solicitação imprópria:** "Onde devo investir?" → Recusou e ofereceu educação
+
+### Observações
+- **ChatGPT, Copilot e Claude** tiveram comportamentos similares com o mesmo prompt
+- **ChatGPT** teve dificuldade no edge case "previsão do tempo" (confundiu com orçamento)
+- **Ollama local** funcionou bem, mas respostas ligeiramente mais lentas
+
+---
+
+## 🔒 Segurança e Limitações
+
+### Estratégias Anti-Alucinação
+- ✅ Só usa dados fornecidos no contexto
+- ✅ Não recomenda investimentos específicos
+- ✅ Admite quando não sabe algo
+- ✅ Foca em educar, não em aconselhar
+
+### O Que a Mahailah NÃO Faz
+- ❌ Não faz recomendações de investimento
+- ❌ Não acessa dados bancários sensíveis
+- ❌ Não substitui profissional certificado (CFP, CGA)
+- ❌ Não responde perguntas fora do tema finanças
+
+---
+
+## 🎬 Pitch (3 minutos)
+
+### Estrutura
+| Tempo | Seção | Mensagem |
+|-------|-------|----------|
+| 0:00 - 0:30 | Problema | "62% dos brasileiros não sabem o que é reserva de emergência" |
+| 0:30 - 1:30 | Solução | "Mahailah ensina usando SEUS dados como exemplo" |
+| 1:30 - 2:30 | Demo | Demonstração ao vivo com 3 perguntas |
+| 2:30 - 3:00 | Diferencial | "Roda 100% local, sem custo, sem enviar dados" |
+
+### Diferencial
+Diferente de chatbots genéricos, a Mahailah:
+- 📚 **Personaliza** o ensino com os dados reais do cliente
+- 🔒 **Privacidade total** - roda localmente via Ollama
+- 💰 **Custo zero** - sem APIs pagas
+- 🎯 **Foco educativo** - não tenta vender produtos
+
+---
+
+## 📚 Documentação Completa
+
+- [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md) - Caso de uso e arquitetura
+- [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md) - Estratégia de dados
+- [`docs/03-prompts.md`](./docs/03-prompts.md) - System prompt e exemplos
+- [`docs/04-metricas.md`](./docs/04-metricas.md) - Avaliação e testes
+- [`docs/05-pitch.md`](./docs/05-pitch.md) - Roteiro de apresentação
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Interface:** Streamlit
+- **LLM:** Ollama (gpt-oss)
+- **Linguagem:** Python 3.10+
+- **Dados:** JSON + CSV (pandas)
+- **Hospedagem:** Local (sem dependências externas)
+
+---
+
+## 🤝 Contribuindo
+
+Este projeto é educacional e faz parte de um desafio. Sinta-se livre para:
+- Adaptar para seu caso de uso
+- Testar com outros modelos (Claude, GPT, Gemini)
+- Expandir a base de conhecimento
+- Sugerir melhorias via Issues
+
+---
+
+## 📝 Licença
+
+Uso educativo/exemplificativo. Adapte conforme necessário.
+
+---
+
+## 👤 Autor
+
+Desenvolvido como parte do desafio **DIO + Bradesco: Agente Financeiro Inteligente com IA Generativa**
+
+---
+
+## 🙏 Agradecimentos
+
+- **DIO** pela estrutura do desafio
+- **Bradesco** pelo case real de inspiração (BIA)
+- **Venilton FalvoJr** pelos vídeos explicativos e templates
+
+---
+
+**⭐ Se este projeto te ajudou, deixe uma estrela no repositório!**
