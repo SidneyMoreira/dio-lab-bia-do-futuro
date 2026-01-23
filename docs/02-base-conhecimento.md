@@ -1,5 +1,21 @@
 # Base de Conhecimento
 
+> [!TIP]
+> **Prompt Sugerido para esta etapa:**
+> ```
+> Preciso organizar minha base de conhecimento do meu agente [nome_seu_agente].
+> Tenho esses arquivos de dados:
+>   [listar os arquivos]
+>
+> Me ajude a:
+>   (1) Entender o que cada arquivo contém.
+>   (2) Descidir como usar cada um.
+>   (3) Criar exemplos de contexto formatado para incluir no prompt.
+>
+> [cole o template 02-base-conhecimento.md]
+> ```
+---
+
 ## Dados Utilizados
 
 | Arquivo | Formato | Como a Mahailah utilizará? |
