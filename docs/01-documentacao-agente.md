@@ -1,5 +1,21 @@
 # Documentação do Agente
 
+> [!TIP]
+> **Prompt Sugerido para esta etapa:**
+> ```
+> Ajude-me a documentar uma Agente de [nome_agente]. O caso de uso é [descrever o caso de uso].
+> Preciso definir:
+>   - Problema que resolve
+>   - Publico Alco
+>   - Personiladade do Agente
+>   - Tom de voz
+>   - Estratégia Anti-alucinações
+>
+> Use o template abaixo como exemplo:
+>    [cole o template 01-documentacao-agente.md]
+> ```
+---
+
 ## Caso de Uso
 
 ### Problema
