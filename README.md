@@ -114,8 +114,8 @@ REGRAS:
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/mahailah-educadora-financeira.git
-cd mahailah-educadora-financeira
+git clone https://github.com/seu-usuario/dio-lab-bia-do-futuro.git
+cd dio-lab-bia-do-futuro
 ```
 
 2. **Instale as dependências**
